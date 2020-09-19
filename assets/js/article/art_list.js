@@ -151,4 +151,9 @@ $(function () {
             layer.close(index)
         })
     })
+
+    // 通过代理形式为编辑按钮绑定点击事件
+    $('tbody').on('click', '.btn-edit', function () {
+        location.href = '/article/art_edit.html?id=' + $(this).attr('data-id')
+    })
 })
